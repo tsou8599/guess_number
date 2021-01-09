@@ -28,10 +28,18 @@
     <input type="text" id="num">
     <button id="btn">Guess</button>
     <script>
-        const num = document.getElementById('num');
+
         const btn = document.getElementById('btn');
+        const random = Math.floor(Math.random() * 6) + 1; //floor無條件捨去
+        
         btn.addEventListener('click', function(e){
-            console.log(num.value);
+            const num = (document.getElementById('num')).value;
+            if(! num){
+                alert('input something, please!')
+                return;
+            }
+            console.log(random);
+            console.log(num);
         });
     </script>
 </body>
