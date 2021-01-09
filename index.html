@@ -33,13 +33,25 @@
         const random = Math.floor(Math.random() * 6) + 1; //floor無條件捨去
         
         btn.addEventListener('click', function(e){
-            const num = (document.getElementById('num')).value;
+            let num = (document.getElementById('num')).value;
             if(! num){
                 alert('input something, please!')
                 return;
             }
-            console.log(random);
-            console.log(num);
+            if(num > 6){
+                alert('input nymber 1 ~ 6, please');
+                return;
+            }
+            num = parseInt(num);
+            if(num === random){
+                alert('Good Job, You are right!!!')
+                return;
+            }
+            if(num > random){
+                alert('smaller');
+                return;
+            }
+                alert('bigger');
         });
     </script>
 </body>
