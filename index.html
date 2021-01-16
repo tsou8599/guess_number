@@ -36,23 +36,44 @@
         btn.addEventListener('click', function(e){
             let num = (document.getElementById('num')).value;
             if(! num){
-                alert('input something, please!')
+                Swal.fire({
+                title: 'Error!',
+                text: 'input something, please!',
+                icon: 'error',
+                })
                 return;
             }
             if(num > 6){
-                alert('input nymber 1 ~ 6, please');
+                Swal.fire({
+                title: 'Error!',
+                text: 'input number 1 ~ 6, please',
+                icon: 'error',
+                })
                 return;
             }
             num = parseInt(num);
             if(num === random){
-                alert('Good Job, You are right!!!')
+                Swal.fire({
+                title: 'Yeah!',
+                text: 'Good Job, You are right!!!',
+                icon: 'success',
+                })
                 return;
             }
             if(num > random){
-                alert('smaller');
+                Swal.fire({
+                title: 'pussy!',
+                text: 'smaller',
+                icon: 'warning',
+                })
                 return;
             }
-                alert('bigger');
+                Swal.fire({
+                title: 'idiot!',
+                text: 'bigger',
+                icon: 'warning',
+                })
+                
         });
     </script>
 </body>
